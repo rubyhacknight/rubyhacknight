@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
+    GithubUser.from_session session[:user]
   end
   helper_method :current_user
 
