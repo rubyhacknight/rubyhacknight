@@ -1,0 +1,6 @@
+<% if !current_user %>
+  <%= link_to "sign in via github", "/auth/github" %>
+<% else %>
+  <%= current_user.name %>
+<% end %>
+

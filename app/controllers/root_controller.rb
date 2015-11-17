@@ -1,6 +1,6 @@
 class RootController < ApplicationController
 
-  def new
+  def index
   end
 
 end
