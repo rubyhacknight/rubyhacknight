@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def current_user
-    GithubUser.from_session session[:user]
+  def account
+    GithubAccount.from_session session[:account]
   end
-  helper_method :current_user
+  helper_method :account
 
 end

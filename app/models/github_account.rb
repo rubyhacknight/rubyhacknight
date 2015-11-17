@@ -1,4 +1,4 @@
-class GuestUser
+class GuestAccount
 
   def signed_in?
     false
@@ -6,7 +6,7 @@ class GuestUser
 
 end
 
-class GithubUser
+class GithubAccount
 
   class << self
     def from_omniauth_blob auth_blob
@@ -16,7 +16,7 @@ class GithubUser
     end
 
     def from_session session_hash
-      return GuestUser.new if session_hash.nil?
+      return GuestAccount.new if session_hash.nil?
 
       new session_hash.fetch("id"),
           session_hash.fetch("nickname"),
