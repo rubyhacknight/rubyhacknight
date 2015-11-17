@@ -1,2 +1,2 @@
 # rubyhacknight
-Website for the Ruby Hack Night website
+Website for Ruby Hack Night meetups!
