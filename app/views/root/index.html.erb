@@ -1,6 +1,7 @@
 <% if !current_user.signed_in? %>
   <%= link_to "sign in via github", "/auth/github" %>
 <% else %>
-  <%= current_user.nickname %>
+  <%= current_user.nickname %><br/>
+  <%= link_to "sign out", sign_out_path, method: :delete %>
 <% end %>
 

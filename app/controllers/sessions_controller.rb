@@ -6,4 +6,10 @@ class SessionsController < ApplicationController
     redirect_to :root
   end
 
+  def destroy
+    session[:user] = nil
+
+    redirect_to :root
+  end
+
 end

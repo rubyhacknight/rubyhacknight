@@ -1,3 +1,11 @@
+class GuestUser
+
+  def signed_in?
+    false
+  end
+
+end
+
 class GithubUser
 
   class << self
@@ -8,9 +16,11 @@ class GithubUser
     end
 
     def from_session session_hash
-      new session_hash["id"],
-          session_hash["nickname"],
-          session_hash["avatar"]
+      return GuestUser.new if session_hash.nil?
+
+      new session_hash.fetch("id"),
+          session_hash.fetch("nickname"),
+          session_hash.fetch("avatar")
     end
   end
 
