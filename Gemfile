@@ -39,7 +39,7 @@ gem "omniauth-github", "1.1.1"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem 'puma'
+# gem 'puma'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
