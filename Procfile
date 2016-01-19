@@ -1,1 +1,1 @@
-web: bundle exec rails server Puma -p 8080
+web: bundle exec rails server
