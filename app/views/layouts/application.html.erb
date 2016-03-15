@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-8"><h1>Ruby Hacknight</h1></div>
+    <div class="col-md-4">
+    <%= yield %>
+    <% if !account.signed_in? %>
+      <%= link_to "sign in via github", "/auth/github" %>
+    <% else %>
+      <%= account.nickname %><br/>
+      <%= link_to "sign out", sign_out_path, method: :delete %>
+    <% end %>
+    </div>
+  </div>
 </body>
 </html>
