@@ -8,22 +8,19 @@
 </head>
 <body>
   <div class="container">
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
     <div class="row">
-    <div class="col-md-8"><h1>Ruby Hacknight</h1></div>
-    <div class="col-md-4">
-    <%= yield %>
-    <% if !account.signed_in? %>
-      <%= link_to "sign in via github", "/auth/github" %>
-    <% else %>
-      <%= account.nickname %><br/>
-      <%= link_to "sign out", sign_out_path, method: :delete %>
-    <% end %>
+      <div class="col-md-8"><h1>Ruby Hacknight</h1></div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+      <%= yield %>
+      <% if !account.signed_in? %>
+        <%= link_to "sign in via github", "/auth/github" %>
+      <% else %>
+        <%= account.nickname %><br/>
+        <%= link_to "sign out", sign_out_path, method: :delete %>
+      <% end %>
+      </div>
+    </div>
 </body>
 </html>
