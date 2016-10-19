@@ -1,7 +1,3 @@
-<% if !account.signed_in? %>
-  <%= link_to "sign in via github", "/auth/github" %>
-<% else %>
-  <%= account.nickname %><br/>
-  <%= link_to "sign out", sign_out_path, method: :delete %>
-<% end %>
-
+<p>
+The hacknight is all about discussing interesting ruby topics, as well as working on (pet) projects. If you like todo a quick talk, or want to organize with fellow hackers ahead of time, checkout the github repo, where we collect topics in the issue tracker. Want to chat before or after the meetup? We have a gitter chatroom open where we hangout.
+</p>
